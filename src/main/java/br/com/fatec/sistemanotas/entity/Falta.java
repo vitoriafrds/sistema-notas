@@ -1,9 +1,6 @@
 package br.com.fatec.sistemanotas.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,8 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.time.LocalDate;
 
-@Getter
-@Setter
+@Builder
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
