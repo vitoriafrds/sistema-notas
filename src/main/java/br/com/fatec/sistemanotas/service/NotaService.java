@@ -18,10 +18,18 @@ public class NotaService {
       this.repository = repository;
     }
 
+  public void registrarNotaPrimeiraAvaliacao(NotaDTO nota) {
+    registrarNotas(nota);
+  }
+
+  public void registrarNotaSegundaAvaliacao(String aluno, double nota) {
+    repository.registrarNota(aluno, nota);
+  }
+
   public void registrarNotas(NotaDTO request) {
    log.info("Registrando nota para o aluno [{}] para a disciplina [{}]", request.getRa(), request.getDisciplina());
    repository.save(Nota.builder().ra(request.getRa()).codigoAvaliacao(request.getCodigoAvaliacao())
        .codigoDisciplina(request.getDisciplina())
-       .nota(request.getNota()).build());
+       .primeiraNota(request.getNota()).build());
     }
 }

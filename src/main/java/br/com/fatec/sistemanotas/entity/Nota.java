@@ -25,5 +25,10 @@ public class Nota {
     private Integer codigoAvaliacao;
 
     @Column(name = "NOTA")
-    private double nota;
+    private double primeiraNota;
+
+
+    @Column(name = "NOTA_2")
+    private double segundaNota;
+
 }

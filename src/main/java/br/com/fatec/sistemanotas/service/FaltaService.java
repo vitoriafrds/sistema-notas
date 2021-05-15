@@ -4,11 +4,10 @@ import br.com.fatec.sistemanotas.entity.Falta;
 import br.com.fatec.sistemanotas.entity.dto.FaltaDTO;
 import br.com.fatec.sistemanotas.enumerator.IndicadorPresenca;
 import br.com.fatec.sistemanotas.repository.FaltaRepository;
+import java.time.LocalDate;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
 
 @Slf4j
 @Service

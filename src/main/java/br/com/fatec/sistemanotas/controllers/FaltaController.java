@@ -1,7 +1,6 @@
 package br.com.fatec.sistemanotas.controllers;
 
 import br.com.fatec.sistemanotas.entity.dto.FaltaDTO;
-import br.com.fatec.sistemanotas.entity.dto.NotaDTO;
 import br.com.fatec.sistemanotas.service.FaltaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
