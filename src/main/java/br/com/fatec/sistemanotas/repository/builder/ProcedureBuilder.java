@@ -49,10 +49,10 @@ public class ProcedureBuilder {
       RelacaoFaltasTurma relacao = new RelacaoFaltasTurma();
       relacao.setRa(falta.getRa());
       relacao.setNome(falta.getNome());
-      relacao.setPrimeiraData(relacao.getPrimeiraData());
-      relacao.setSegundaData(falta.getSegundaData());
-      relacao.setTotalFaltas(falta.getTotalFaltas());
+      relacao.setDisciplina(falta.getDisciplina());
+      relacao.setDataAula(falta.getDataAula());
       relacao.setTotalPresencas(falta.getTotalPresencas());
+      relacao.setTotalFaltas(falta.getTotalFaltas());
       return relacao;
     }).collect(Collectors.toList());
 

@@ -22,18 +22,18 @@ public class RelacaoFaltasTurma {
   @Column(name = "RA")
   private String ra;
 
-  @Column(name = "")
+  @Column(name = "NOME")
   private String nome;
 
-  @Column(name = "DATA_1")
-  private LocalDate primeiraData;
+  @Column(name = "DISCIPLINA")
+  private String disciplina;
 
-  @Column(name = "DATE_2")
-  private LocalDate segundaData;
-
-  @Column(name = "TOTAL_FALTAS")
-  private Integer totalFaltas;
+  @Column(name = "DATA_AULA")
+  private LocalDate dataAula;
 
   @Column(name = "TOTAL_PRESENCAS")
   private Integer totalPresencas;
+
+  @Column(name = "TOTAL_FALTAS")
+  private Integer totalFaltas;
 }
