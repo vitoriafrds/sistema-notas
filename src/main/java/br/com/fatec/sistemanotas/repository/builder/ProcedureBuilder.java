@@ -20,8 +20,7 @@ public class ProcedureBuilder {
 
   public List<RelacaoAlunosTurma> chamarProcedureTurma() {
 
-    StoredProcedureQuery query = entityManager
-        .createStoredProcedureQuery(PROCEDURE_TURMA, RelacaoAlunosTurma.class);
+    StoredProcedureQuery query = entityManager.createStoredProcedureQuery(PROCEDURE_TURMA, RelacaoAlunosTurma.class);
     query.execute();
 
     List<RelacaoAlunosTurma> alunos = query.getResultList();
@@ -55,7 +54,5 @@ public class ProcedureBuilder {
       relacao.setTotalFaltas(falta.getTotalFaltas());
       return relacao;
     }).collect(Collectors.toList());
-
-
   }
 }
