@@ -16,7 +16,7 @@ public class NotaService {
   @Autowired
   public NotaService(NotaRepository repository) {
       this.repository = repository;
-    }
+  }
 
   public void registrarNotaPrimeiraAvaliacao(NotaDTO nota) {
     registrarNotas(nota);
@@ -26,10 +26,10 @@ public class NotaService {
     repository.registrarNota(aluno, nota);
   }
 
-  public void registrarNotas(NotaDTO request) {
+  private void registrarNotas(NotaDTO request) {
    log.info("Registrando nota para o aluno [{}] para a disciplina [{}]", request.getRa(), request.getDisciplina());
    repository.save(Nota.builder().ra(request.getRa()).codigoAvaliacao(request.getCodigoAvaliacao())
        .codigoDisciplina(request.getDisciplina())
        .primeiraNota(request.getNota()).build());
-    }
+  }
 }

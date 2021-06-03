@@ -22,9 +22,10 @@ public class FaltaService {
   public void registrarFaltas(FaltaDTO request) {
     log.info("Registrando faltas para o aluno: [{}] na disciplina [{}]", request.getRa(), request.getCodigoDisciplina());
     repository.save(Falta.builder().
-        raAluno(request.getRa())
-        .codigoDisciplina(request.getCodigoDisciplina())
-        .dataAula(LocalDate.now())
-        .presenca(IndicadorPresenca.parse(request.isPresenca())).build());
+        raAluno(request.getRa()).
+        codigoDisciplina(request.
+        getCodigoDisciplina()).
+        dataAula(LocalDate.now()).
+        presenca(IndicadorPresenca.parse(request.isPresenca())).build());
     }
 }

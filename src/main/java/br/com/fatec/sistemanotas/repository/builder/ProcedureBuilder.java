@@ -19,7 +19,6 @@ public class ProcedureBuilder {
   private EntityManager entityManager;
 
   public List<RelacaoAlunosTurma> chamarProcedureTurma() {
-
     StoredProcedureQuery query = entityManager.createStoredProcedureQuery(PROCEDURE_TURMA, RelacaoAlunosTurma.class);
     query.execute();
 
@@ -38,7 +37,6 @@ public class ProcedureBuilder {
   }
 
   public List<RelacaoFaltasTurma> procedureFaltasTurma() {
-
     StoredProcedureQuery query = entityManager.createStoredProcedureQuery(PROCEDURE_FALTAS, RelacaoFaltasTurma.class);
     query.execute();
 

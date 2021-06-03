@@ -17,7 +17,6 @@ public enum IndicadorPresenca {
         if (presenca) {
             return PRESENTE.getCodigo();
         }
-
         return FALTOU.getCodigo();
     }
 }
